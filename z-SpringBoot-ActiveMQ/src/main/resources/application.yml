@@ -1,0 +1,18 @@
+server:
+  servlet:
+    context-path: /activemq
+  port: 8080
+---
+spring:
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    user: user
+    password: user
+    pool:
+      # 最大连接数  默认1
+      max-connections: 3
+      # 默认false 不使用连接池
+      enabled: true
+      #  空闲的连接过期时间,默认30s
+      idle-timeout: 30000
+
